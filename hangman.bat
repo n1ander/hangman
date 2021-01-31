@@ -17,13 +17,22 @@ if %_confirm% == y goto :play
 if %_confirm% == n goto :noplay
 :play
 echo.
-echo Lets play!
+echo Lets play! Lets go over the rules.
 goto :startgame
 exit /B 0
 :noplay
+cls
 echo That is unfortunate. Hope to see you soon.
 exit /B 0
 :startgame
-echo But first, let us go over the rules.
+goto :rules
+exit /B 0
+:rules
+cls
+echo RULES:
+echo - Only input one letter at a time
+echo - Letter will fill in if correct
+echo.
+echo.
 exit /B 0
 pause>nil
